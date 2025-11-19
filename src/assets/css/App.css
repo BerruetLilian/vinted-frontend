@@ -1,0 +1,13 @@
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+img {
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

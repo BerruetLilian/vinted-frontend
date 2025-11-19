@@ -1,0 +1,66 @@
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+header img {
+  cursor: pointer;
+  height: 30px;
+}
+
+header .search {
+  display: flex;
+  align-items: center;
+  background-color: #f5f6f7;
+}
+
+.search input {
+  background-color: #f5f6f7;
+  width: 590px;
+  padding-left: 20px;
+  border-radius: 5px;
+  height: 37px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search svg {
+  margin-left: 10px;
+  color: #bbb;
+  height: 20px;
+  width: 20px;
+}
+
+header .sign-in-up {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.sign-in-up button {
+  background-color: #fff;
+  color: #2cb1ba;
+  height: 30px;
+  width: 115px;
+  border: 1px solid #2cb1ba;
+  border-radius: 5px;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+header .container > button {
+  background-color: #2cb1ba;
+  color: #fff;
+  height: 30px;
+  width: 115px;
+  border: 1px solid #2cb1ba;
+  border-radius: 5px;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
