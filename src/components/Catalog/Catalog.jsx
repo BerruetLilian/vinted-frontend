@@ -12,7 +12,6 @@ const Catalog = () => {
         "https://lereacteur-vinted-api.herokuapp.com/offers"
       );
       setCatalog(response.data.offers);
-      console.log(response.data.offers);
     };
     fetchData();
   }, []);

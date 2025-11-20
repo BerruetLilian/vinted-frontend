@@ -1,5 +1,5 @@
 article {
-  width: 235px;
+  width: calc((100% - 64px) / 5);
   padding: 0 16px;
   cursor: pointer;
 }
@@ -23,9 +23,9 @@ article .avatar span {
   font-size: 12px;
 }
 
-article > img {
+article > a > img {
   height: 360px;
-  width: 235px;
+  width: 100%;
   object-fit: cover;
 }
 

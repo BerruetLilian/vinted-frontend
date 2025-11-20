@@ -1,21 +1,21 @@
-main {
+.offer-page {
   min-height: calc(100vh - 60px);
   background-color: #ebedee;
 }
 
-main .container {
+.offer-page .container {
   display: flex;
   justify-content: space-around;
   padding: 30px;
   gap: 30px;
 }
 
-main img {
+.offer-page img {
   height: 600px;
   object-fit: cover;
 }
 
-main .infos {
+.offer-page .infos {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -102,7 +102,6 @@ main .infos {
   padding: 0 16px;
   line-height: 36px;
   margin-top: 32px;
-  outline: none;
   cursor: pointer;
 }
 

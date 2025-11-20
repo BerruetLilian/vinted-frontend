@@ -27,11 +27,11 @@ const Offer = () => {
     fetchData();
   }, [id]);
   return (
-    <main>
+    <main className="offer-page">
       <div className="container">
         {Object.keys(offer).length !== 0 && (
           <>
-            <img src={offer.product_pictures[0].url} />
+            <img src={offer.product_image.secure_url} />
             <div className="infos">
               <div className="details">
                 <span>{offer.product_price + " €"}</span>
