@@ -2,8 +2,13 @@ import "./header.css";
 import logo from "../../assets/img/logo.png";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
-const Header = () => {
+const Header = ({ setSignUpVisible, setSignInVisible, token, setToken }) => {
+  const handleLogOut = () => {
+    setToken(false);
+    Cookies.remove("token");
+  };
   return (
     <header>
       <div className="container">
@@ -14,10 +19,28 @@ const Header = () => {
           <FaMagnifyingGlass />
           <input type="text" placeholder="Recherche des articles" />
         </div>
-        <div className="sign-in-up">
-          <button>S'inscrire</button>
-          <button>Se connecter</button>
-        </div>
+        {token ? (
+          <button className="logout-btn" onClick={handleLogOut}>
+            Se déconnecter
+          </button>
+        ) : (
+          <div className="sign-in-up">
+            <button
+              onClick={() => {
+                setSignUpVisible(true);
+              }}
+            >
+              S'inscrire
+            </button>
+            <button
+              onClick={() => {
+                setSignInVisible(true);
+              }}
+            >
+              Se connecter
+            </button>
+          </div>
+        )}
         <button>Vends tes articles</button>
       </div>
     </header>

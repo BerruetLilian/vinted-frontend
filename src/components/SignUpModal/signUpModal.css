@@ -1,0 +1,92 @@
+.sign-up-modal {
+  position: relative;
+  background-color: white;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.sign-up-modal h2 {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.leave-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sign-up-modal form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 20px;
+}
+
+.sign-up-modal form > input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #fcced3;
+  outline: none;
+  height: 35px;
+}
+
+.checkBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkBox > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #666;
+}
+
+.checkBox input {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.checkBox p {
+  color: #999;
+  font-size: 12px;
+}
+
+.sign-up-modal form button {
+  background-color: #2cb1ba;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sign-up-modal > p {
+  color: #2cb1ba;
+  font-size: 12px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.sign-up-modal > p:hover {
+  text-decoration: underline;
+}
+
+.sign-up-modal form .waiting-btn {
+  background-color: #666;
+  cursor: progress;
+}
