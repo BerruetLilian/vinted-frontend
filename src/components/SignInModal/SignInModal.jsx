@@ -2,11 +2,13 @@ import "./signInModal.css";
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const SignInModal = ({ setSignUpVisible, setSignInVisible, setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -33,6 +35,7 @@ const SignInModal = ({ setSignUpVisible, setSignInVisible, setToken }) => {
         setToken(response.data.token);
         setLoading(false);
         setSignInVisible(false);
+        navigate("/publish");
       } catch (error) {
         console.log(error);
         setLoading(false);

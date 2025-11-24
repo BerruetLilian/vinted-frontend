@@ -16,7 +16,7 @@ const Catalog = () => {
     fetchData();
   }, []);
   return (
-    <main>
+    <main className="catalog">
       <div className="container">
         {catalog.length !== 0 &&
           catalog.map((offer) => {

@@ -1,7 +1,7 @@
 import "./header.css";
 import logo from "../../assets/img/logo.png";
 import { FaMagnifyingGlass } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const Header = ({ setSignUpVisible, setSignInVisible, token, setToken }) => {
@@ -9,6 +9,7 @@ const Header = ({ setSignUpVisible, setSignInVisible, token, setToken }) => {
     setToken(false);
     Cookies.remove("token");
   };
+  const navigate = useNavigate();
   return (
     <header>
       <div className="container">
@@ -41,7 +42,17 @@ const Header = ({ setSignUpVisible, setSignInVisible, token, setToken }) => {
             </button>
           </div>
         )}
-        <button>Vends tes articles</button>
+        <button
+          onClick={() => {
+            if (!token) {
+              setSignInVisible(true);
+            } else {
+              navigate("/publish");
+            }
+          }}
+        >
+          Vends tes articles
+        </button>
       </div>
     </header>
   );

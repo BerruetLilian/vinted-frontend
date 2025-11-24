@@ -13,7 +13,9 @@ const Offer = ({
   return (
     <article>
       <div className="avatar">
-        <img src={owner.account.avatar.secure_url} alt="user avatar" />
+        {owner.account.avatar && (
+          <img src={owner.account.avatar.secure_url} alt="user avatar" />
+        )}
         <span>{owner.account.username}</span>
       </div>
       <Link to={"/offers/" + _id}>

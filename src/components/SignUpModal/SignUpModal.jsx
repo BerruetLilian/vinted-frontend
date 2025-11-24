@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./signUpModal.css";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const SignUpModal = ({ setSignUpVisible, setSignInVisible, setToken }) => {
   const [userName, setUserName] = useState("");
@@ -9,6 +10,7 @@ const SignUpModal = ({ setSignUpVisible, setSignInVisible, setToken }) => {
   const [password, setPassword] = useState("");
   const [newsletter, setNewsLetter] = useState(false);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -37,6 +39,7 @@ const SignUpModal = ({ setSignUpVisible, setSignInVisible, setToken }) => {
         setToken(response.data.token);
         setLoading(false);
         setSignUpVisible(false);
+        navigate("/publish");
       } catch (error) {
         console.log(error);
         setLoading(false);

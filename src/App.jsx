@@ -7,6 +7,7 @@ import SignUpModal from "./components/SignUpModal/SignUpModal";
 import SignInModal from "./components/SignInModal/SignInModal";
 import { useState } from "react";
 import Cookies from "js-cookie";
+import Publish from "./pages/Publish/Publish";
 
 function App() {
   const [signUpVisible, setSignUpVisible] = useState(false);
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/offers/:id" element={<Offer />} />
+          <Route path="/publish" element={<Publish token={token} />} />
         </Routes>
         {signUpVisible && (
           <SignUpModal

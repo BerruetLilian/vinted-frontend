@@ -1,0 +1,124 @@
+.publish-page {
+  background-color: #ebedee;
+}
+
+.publish-page h2 {
+  font-size: 24px;
+  padding-top: 40px;
+  font-weight: 400;
+}
+
+.publish-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.publish-page .file-select {
+  background-color: white;
+  padding: 24px;
+  box-shadow: 0 0 2px gray;
+}
+
+.publish-page .preview {
+  border: 2px #ebedee dashed;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish-page .input-design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0ab1ba;
+  border-radius: 4px;
+  height: 45px;
+  width: 200px;
+}
+
+.input-design label {
+  cursor: pointer;
+  color: #0ab1ba;
+  font-weight: 700;
+}
+
+.image-file {
+  position: relative;
+  height: 90%;
+}
+
+.image-file img {
+  height: 100%;
+}
+
+.file-select .remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.input-design input {
+  display: none;
+}
+
+.publish-page section {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 2px gray;
+}
+
+.publish-page section .text-input {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  height: 73px;
+  border-bottom: 1px solid #ebedee;
+}
+
+.text-input label {
+  font-weight: 400;
+}
+
+.text-input input {
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #ebedee;
+  font-size: 16px;
+}
+
+.text-input input:focus {
+  outline: none;
+}
+
+.checkbox-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkbox-input {
+  padding-top: 10px;
+  width: 50%;
+}
+
+.publish-page form button {
+  margin: 50px 0;
+  background-color: #0ab1ba;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 12px;
+  font-weight: 700;
+}
+
+.form-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
