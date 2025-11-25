@@ -1,0 +1,63 @@
+.payment-page {
+  background: #ebedee;
+  min-height: calc(100vh - 60px);
+  padding-top: 40px;
+}
+
+.payment-container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: white;
+}
+
+.payment-container > p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-container .summary {
+  border-bottom: solid 1px rgba(17, 17, 17, 0.1);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.summary > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666;
+}
+
+.payment-container .total {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: solid 1px rgba(17, 17, 17, 0.1);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.total > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #111;
+}
+
+.total > p > span {
+  font-weight: 700;
+}

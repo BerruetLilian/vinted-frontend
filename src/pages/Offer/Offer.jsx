@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./offer.css";
@@ -6,6 +6,7 @@ import "./offer.css";
 const Offer = () => {
   const { id } = useParams();
   const [offer, setOffer] = useState({});
+  const navigate = useNavigate();
 
   const convertToHtml = (obj) => {
     const entries = Object.entries(obj);
@@ -54,7 +55,18 @@ const Offer = () => {
                   <span>{offer.owner.account.username}</span>
                 </div>
               </div>
-              <button>Acheter</button>
+              <button
+                onClick={() => {
+                  navigate("/payment", {
+                    state: {
+                      title: offer.product_name,
+                      price: offer.product_price,
+                    },
+                  });
+                }}
+              >
+                Acheter
+              </button>
             </div>
           </>
         )}

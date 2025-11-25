@@ -4,7 +4,11 @@ import axios from "axios";
 import { FaPlusCircle } from "react-icons/fa";
 import { useState } from "react";
 
-const Publish = ({ token }) => {
+const Publish = ({ token, setSignInVisible }) => {
+  if (!token) {
+    setSignInVisible(true);
+    return <Navigate to="/" state={{ from: "/publish" }} />;
+  }
   const [file, setFile] = useState({});
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -44,7 +48,7 @@ const Publish = ({ token }) => {
       }
     }
   };
-  return token ? (
+  return (
     <main className="publish-page">
       <div className="container">
         <h2>Vends ton article</h2>
@@ -209,8 +213,6 @@ const Publish = ({ token }) => {
         </form>
       </div>
     </main>
-  ) : (
-    <Navigate to="/" />
   );
 };
 
