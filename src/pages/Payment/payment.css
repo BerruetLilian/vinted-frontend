@@ -11,7 +11,7 @@
   background-color: white;
 }
 
-.payment-container > p {
+.payment-container .baseline {
   font-size: 14px;
   line-height: 18px;
   color: #999;

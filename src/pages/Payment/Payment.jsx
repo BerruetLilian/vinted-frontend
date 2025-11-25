@@ -9,10 +9,10 @@ const Payment = ({ stripePromise, token, setSignInVisible }) => {
     return <Navigate to="/" />;
   }
   const location = useLocation();
-  const protectBuyerFee = 1;
-  const transportFee = 1;
+  const protectBuyerFee = 100;
+  const transportFee = 100;
   const { title, price } = location.state;
-  const amount = protectBuyerFee + transportFee + price;
+  const amount = protectBuyerFee + transportFee + price * 100;
   const options = {
     // Type de transaction
     mode: "payment",
@@ -31,7 +31,7 @@ const Payment = ({ stripePromise, token, setSignInVisible }) => {
     // On lui donner la preuve que nous sommes connectés et les options de paiement
     <main className="payment-page">
       <div className="payment-container">
-        <p>Résumé de la commande</p>
+        <p className="baseline">Résumé de la commande</p>
         <div className="summary">
           <div>
             <span>Commande</span>
@@ -39,22 +39,22 @@ const Payment = ({ stripePromise, token, setSignInVisible }) => {
           </div>
           <div>
             <span>Frais protection acheteurs</span>
-            <span>{protectBuyerFee + " €"}</span>
+            <span>{protectBuyerFee / 100 + " €"}</span>
           </div>
           <div>
             <span>Frais de port</span>
-            <span>{transportFee + " €"}</span>
+            <span>{transportFee / 100 + " €"}</span>
           </div>
         </div>
         <div className="total">
           <div>
             <span>Total</span>
-            <span>{amount + " €"}</span>
+            <span>{amount / 100 + " €"}</span>
           </div>
           <p>
             Il ne vous reste plus qu'une étape pour vous offrir
             <span>{" " + title}</span>. Vous allez payer{" "}
-            <span>{amount + " € "}</span>
+            <span>{amount / 100 + " € "}</span>
             (frais de protection et frais de port inclus).
           </p>
         </div>
